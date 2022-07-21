@@ -396,7 +396,7 @@ section.projects-section .container .project-list .project-item .content-area .p
     transform: translateY(0);
   }
   20% {
-    transform: scaleX(2) translateY(0);
+    transform: scaleX(0.6) translateY(0);
   }
   70% {
     transform: translateY(150%);
@@ -411,7 +411,7 @@ section.projects-section .container .project-list .project-item .content-area .p
     transform: translateY(0);
   }
   20% {
-    transform: scaleX(2) translateY(0);
+    transform: scaleX(0.6) translateY(0);
   }
   70% {
     transform: translateY(150%);
