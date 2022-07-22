@@ -1,12 +1,19 @@
-import githubIcon from '../Assets/github-icon.svg';
-import linkedinIcon from '../Assets/linkedin-icon.svg';
-import hamburgerOpen from '../Assets/hamburger-open.svg';
-import hamburgerClose from '../Assets/hamburger-close.svg';
+import hamburgerOpen from "../Assets/hamburger-open.svg";
+import hamburgerClose from "../Assets/hamburger-close.svg";
+import { AiFillProject } from "react-icons/ai";
+import {
+  BsFillHouseFill,
+  BsFillPersonFill,
+  BsFillFileEarmarkFill,
+} from "react-icons/bs";
+
+import NavBarItem from "./NavBarItem";
+
 function Navbar() {
   return (
-    <div className="navbar">
-      <div className="container">
-        <a className="logo" href="/">
+    <div className="navbar fixed top w-full my-4">
+      <div className="container flex justify-between items-center w-full h-full">
+        <a className="logo text-primary-dark pl-4" href="/">
           Sg.
         </a>
         <img
@@ -15,49 +22,22 @@ function Navbar() {
           src={hamburgerOpen}
           alt="Open Menu"
         ></img>
-        <nav>
+        <nav className="flex justify-between items-center w-fit text-white h-full p-0 m-0">
           <img
             id="mobile-close"
             className="close-menu"
             src={hamburgerClose}
             alt="Close menu"
           ></img>
-          <ul className="main-nav">
-            <li>
-              <a href="/">Home</a>
-            </li>
-            <li>
-              <a href="/">Work</a>
-            </li>
-            <li>
-              <a href="/">About</a>
-            </li>
-            <li>
-              <a href="/">Resume</a>
-            </li>
+          <ul className="main-nav bg-black flex justify-between w-full h-full m-0 gap-4">
+            <NavBarItem icon={<BsFillHouseFill size="22"/>} label="Home" />
+            <NavBarItem icon={<BsFillPersonFill size="22"/>} label="About" />
+            <NavBarItem icon={<AiFillProject size="22"/>} label="Projects" />
+            <NavBarItem icon={<BsFillFileEarmarkFill size="22"/>} label="Resume" />
           </ul>
-          {/* <ul className="secondary-nav">
-            <li>
-              <a href="/">
-                <img
-                  src={githubIcon}
-                  alt="Github"
-                ></img>
-              </a>
-            </li>
-            <li>
-              <a href="/">
-                <img
-                  src={linkedinIcon}
-                  alt="Linkedin"
-                ></img>
-              </a>
-            </li>
-          </ul> */}
         </nav>
       </div>
     </div>
   );
 }
-
 export default Navbar;
