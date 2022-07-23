@@ -1,40 +1,43 @@
-import hamburgerOpen from "../Assets/hamburger-open.svg";
-import hamburgerClose from "../Assets/hamburger-close.svg";
-import { AiFillProject } from "react-icons/ai";
-import {
-  BsFillHouseFill,
-  BsFillPersonFill,
-  BsFillFileEarmarkFill,
-} from "react-icons/bs";
-
-import NavBarItem from "./NavBarItem";
+import React, { useState } from "react";
+import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
+import { NavBarMenuIcon } from "./NavBarItem";
+import { NavbarLinks } from "./NavbarLinks";
 
 function Navbar() {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const handleToggle = () => {
+    setIsOpen((prev) => !prev);
+  };
+
+  const closeMenu = (
+    <div onClick={handleToggle}>
+      <NavBarMenuIcon icon={<AiOutlineClose size="26" />} />
+    </div>
+  );
+
+  const openMenu = (
+    <div onClick={handleToggle} className="m-0 p-0">
+      <NavBarMenuIcon icon={<AiOutlineMenu size="26" />} />
+    </div>
+  );
+
   return (
-    <div className="navbar fixed top w-full my-4">
-      <div className="container flex justify-between items-center w-full h-full">
-        <a className="logo text-primary-dark pl-4" href="/">
+    <div className="navbar w-full sm:my-4">
+      <div className="flex sm:grid sm:grid-flow-col justify-between items-center w-full h-full">
+        <a className="logo text-primary-dark p-4 text-3xl font-bold lg:pl-12" href="/">
           Sg.
         </a>
-        <img
-          id="mobile-menu"
-          className="mobile-menu"
-          src={hamburgerOpen}
-          alt="Open Menu"
-        ></img>
-        <nav className="flex justify-between items-center w-fit text-white h-full p-0 m-0">
-          <img
-            id="mobile-close"
-            className="close-menu"
-            src={hamburgerClose}
-            alt="Close menu"
-          ></img>
-          <ul className="main-nav bg-black flex justify-between w-full h-full m-0 gap-4">
-            <NavBarItem icon={<BsFillHouseFill size="22"/>} label="Home" />
-            <NavBarItem icon={<BsFillPersonFill size="22"/>} label="About" />
-            <NavBarItem icon={<AiFillProject size="22"/>} label="Projects" />
-            <NavBarItem icon={<BsFillFileEarmarkFill size="22"/>} label="Resume" />
-          </ul>
+        {isOpen ? (
+          <nav className="sm:flex h-fit fixed sm:sticky top-0 bg-black sm:justify-between items-center w-full sm:w-fit sm:h-full p-0 m-0">
+            {closeMenu}
+            <NavbarLinks />
+          </nav>
+        ) : (
+          openMenu
+        )}
+        <nav className="sm:flex h-fit hidden fixed sm:sticky top-0 bg-black sm:justify-between items-center w-full sm:w-fit sm:h-full p-0 m-0">
+          <NavbarLinks />
         </nav>
       </div>
     </div>

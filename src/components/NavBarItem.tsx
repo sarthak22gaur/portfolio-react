@@ -1,4 +1,4 @@
-function NavBarItem({ icon, label }: { icon: React.ReactNode; label: string }) {
+export function NavBarItem({ icon, label }: { icon: React.ReactNode; label: string }) {
   return (
     <li>
       <a href="/">
@@ -10,4 +10,11 @@ function NavBarItem({ icon, label }: { icon: React.ReactNode; label: string }) {
     </li>
   );
 }
-export default NavBarItem;
+
+export function NavBarMenuIcon({ icon }: { icon: React.ReactNode;}) {
+  return (
+      <button className="text-white float-right p-4 sm:hidden">
+        {icon}
+      </button>
+  );
+}
