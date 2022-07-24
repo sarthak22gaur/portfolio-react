@@ -8,7 +8,7 @@ function App() {
   return (
     <div className="App w-full">
       <Navbar />
-      {/* <Home /> */}
+      <Home />
       <About />
     </div>
   );

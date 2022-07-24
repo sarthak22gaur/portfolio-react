@@ -8,7 +8,7 @@ import { GrMysql } from "react-icons/gr";
 
 
 function TechCard({ icon, label }: { icon: React.ReactNode; label: string }) {
-      return (<div className="w-fit lg:w-40 m-4">
+      return (<div className="w-fit lg:w-40 m-4 hover:animate-pulse">
         <Tilt>
           <div className="bg-black text-white rounded-xl flex flex-col p-4 lg:p-8 w-full text-2xl jusify-center items-center hover:text-primary-dark">
             <i className="">{icon}</i>
@@ -21,7 +21,7 @@ function TechCard({ icon, label }: { icon: React.ReactNode; label: string }) {
 
 function TechStack() {
   return (
-    <div className="flex flex-row flex-wrap w-full justify-around items-center gap-0 mt-12 py-4">
+    <div className="flex flex-row flex-wrap w-full justify-center items-center gap-0 mt-12 py-4">
         <TechCard icon={<FaNodeJs size="50" />} label="Nodejs" />
         <TechCard icon={<SiCplusplus size="50" />} label="C++" />
         <TechCard icon={<SiCsharp size="50" />} label="CSharp" />
