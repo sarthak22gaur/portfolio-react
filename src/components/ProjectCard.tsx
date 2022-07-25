@@ -1,8 +1,6 @@
 import ocean from "../Assets/ocean.jpg";
 import { FaExternalLinkAlt } from "react-icons/fa";
-import {
-  SiGithub
-} from "react-icons/si";
+import { SiGithub } from "react-icons/si";
 
 export function ProjectCard({
   Title,
@@ -22,11 +20,15 @@ export function ProjectCard({
   console.log(ocean);
   return (
     <div className="flex flex-col h-fit p-4 mb-8 transition-all group  ">
-      <div className="w-[400px] group-hover:translate-y-0 object-cover z-10 transition-all text-gray-600 group-hover:text-primary-dark ">
-        <img className="object-fill aspect-square rounded-xl lg:blur-sm lg:grayscale group-hover:blur-0 group-hover:grayscale-0 transition-all" src={Image} alt="" />
+      <div className="w-[400px] object-cover z-10 transition-all text-gray-600 group-hover:text-primary-dark ">
+        <img
+          className="object-fill aspect-square rounded-xl lg:blur-sm lg:grayscale group-hover:blur-0 group-hover:grayscale-0 transition-all"
+          src={Image}
+          alt=""
+        />
         <h1 className="text-3xl font-bold mt-2">{Title}</h1>
       </div>
-      <div className="w-[400px] flex flex-col mt-4 flex-wrap scale-0 group-hover:scale-100 transition-all">
+      <div className="w-[400px] flex flex-col mt-4 flex-wrap lg:scale-0 group-hover:scale-100 transition-all">
         <p className="text-xl text-justify">{Description}</p>
         <ul className="flex flex-wrap my-4 gap-4 text-gray-500">
           <ProjectStackItem label={Tech[0]} />

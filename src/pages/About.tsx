@@ -1,4 +1,5 @@
 import soccer from "../Assets/soccer.svg";
+import homealt from "../Assets/homealt.svg";
 import {
   PageWrapper,
   HeroSectionWrapper,
@@ -32,14 +33,14 @@ function About() {
           </h1>
           <p className="text-xl text-gray-500 italic mt-12">
             When I'm not building stuff for the web or trying out new
-            technologies, I indulge mysefl in one of these 👇🏻
+            tech, I indulge myself in one of these 👇🏻
           </p>
           <ul className="my-4 text-xl text-gray-500">
             <li>Playing/watching soccer ⚽</li>
             <li>Reading books 📚</li>
           </ul>
 
-          <div className="flex gap-8 mt-8 text-primary-dark">
+          <div className="flex gap-8 justify-center lg:justify-start mt-8 text-primary-dark">
             <a href="/">
               <i>
                 <SiLinkedin size="28" />
@@ -54,7 +55,7 @@ function About() {
         </HeroContentWrapper>
       </HeroSectionWrapper>
 
-      <section className="flex flex-col justify-center items-center p-4 mx-4 my8 lg:my-16 text-white">
+      <section className="flex flex-col justify-center items-center p-4 mx-4  lg:my-8 text-white">
         <h1 className="border-primary-dark border-b-2  rounded-md p-4 font-bold text-3xl lg:text-4xl">
           Tools I use
         </h1>

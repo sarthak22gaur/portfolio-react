@@ -6,7 +6,6 @@
 
 @layer components {
   .navbar-item {
-    @apply flex flex-row justify-center items-center gap-2 mx-2 my-4 px-2 border-spacing-0 text-white hover:text-primary-dark
-    sm:hover:border-primary-dark sm:hover:border-r-2;
+    @apply flex flex-row justify-center items-center gap-2 mx-2 my-4 px-2  text-white hover:text-primary-dark;
   }
 }

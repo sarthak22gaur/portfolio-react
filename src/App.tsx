@@ -1,3 +1,4 @@
+import { Route, Routes } from "react-router-dom";
 import "./App.css";
 import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
@@ -9,9 +10,16 @@ function App() {
   return (
     <div className="App w-full">
       <Navbar />
-      <Home />
-      <Projects />
-      <About />
+      <Routes>
+      <Route  path="/" element={<Home />} />
+      {/* <Route  path="/" element={<About />} /> */}
+      <Route  path="/about" element={<About />} />
+      <Route  path="projects" element={<Projects />} />
+      {/* <Home /> */}
+
+      {/* <Projects /> */}
+      {/* <About /> */}
+      </Routes>
 
     </div>
   );

@@ -36,7 +36,7 @@ function Navbar() {
         ) : (
           openMenu
         )}
-        <nav className="sm:flex h-fit hidden fixed sm:sticky top-0 bg-black sm:justify-between items-center w-full sm:w-fit sm:h-full p-0 m-0">
+        <nav className="sm:flex h-fit hidden fixed sm:sticky top-0 bg-black rounded-md sm:justify-between items-center w-full sm:w-fit sm:h-full p-0 m-0">
           <NavbarLinks />
         </nav>
       </div>

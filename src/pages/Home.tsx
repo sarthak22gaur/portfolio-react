@@ -1,4 +1,6 @@
 import illustration from "../Assets/illustration.svg";
+import homeillustration from "../Assets/homeillustration.svg";
+import homealt from "../Assets/homealt.svg";
 import {
   PageWrapper,
   HeroSectionWrapper,
@@ -22,7 +24,7 @@ function Home() {
         <HeroIllustrationWrapper>
           <img
             className="w-full h-full object-contain"
-            src={illustration}
+            src={homeillustration}
             alt=""
           />
         </HeroIllustrationWrapper>

@@ -1,7 +1,7 @@
-export function NavBarItem({ icon, label }: { icon: React.ReactNode; label: string }) {
+export function NavBarItem({ icon, label, pagelink }: { icon: React.ReactNode; label: string; pagelink: string }) {
   return (
     <li>
-      <a href="/">
+      <a href={pagelink}>
         <div className="navbar-item">
           <i>{icon}</i>
           <span>{label}</span>
