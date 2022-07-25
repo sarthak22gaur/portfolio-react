@@ -3,9 +3,3 @@
 @tailwind components;
 @tailwind utilities;
 /*# sourceMappingURL=App.css.map */
-
-@layer components {
-  .navbar-item {
-    @apply flex flex-row justify-center items-center gap-2 mx-2 my-4 px-2  text-white hover:text-primary-dark;
-  }
-}

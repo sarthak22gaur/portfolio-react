@@ -1,7 +1,11 @@
 import React, { useState } from "react";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
-import { NavBarMenuIcon } from "./NavBarItem";
-import { NavbarLinks } from "./NavbarLinks";
+import { AiFillProject } from "react-icons/ai";
+import {
+  BsFillHouseFill,
+  BsFillPersonFill,
+  BsFillFileEarmarkFill,
+} from "react-icons/bs";
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -25,7 +29,10 @@ function Navbar() {
   return (
     <div className="navbar w-full sm:my-4">
       <div className="flex sm:grid sm:grid-flow-col justify-between items-center w-full h-full">
-        <a className="logo text-primary-dark p-4 text-3xl font-bold lg:pl-12" href="/">
+        <a
+          className="logo text-primary-dark p-4 text-3xl font-bold lg:pl-12"
+          href="/"
+        >
           Sg.
         </a>
         {isOpen ? (
@@ -41,6 +48,68 @@ function Navbar() {
         </nav>
       </div>
     </div>
+  );
+}
+
+function NavbarLinks() {
+  return (
+    <ul className="flex flex-col sm:flex-row justify-between items-center w-full mb-4 sm:mb-0 sm:px-4 gap-4 active:text-primary-dark">
+      <NavBarItem
+        icon={<BsFillHouseFill size="16" />}
+        label="Home"
+        pagelink="/"
+      />
+      <NavBarItem
+        icon={<BsFillPersonFill size="16" />}
+        label="About"
+        pagelink="/about"
+      />
+      <NavBarItem
+        icon={<AiFillProject size="16" />}
+        label="Projects"
+        pagelink="/projects"
+      />
+      <NavbarCTA label="Resume" pagelink="/resume" />
+    </ul>
+  );
+}
+
+function NavBarItem({
+  icon,
+  label,
+  pagelink,
+}: {
+  icon: React.ReactNode;
+  label: string;
+  pagelink: string;
+}) {
+  return (
+    <li>
+      <a href={pagelink}>
+        <div className="flex flex-row justify-center items-center gap-2 mx-2 my-4 px-2  text-white hover:text-primary-dark">
+          <i>{icon}</i>
+          <span>{label}</span>
+        </div>
+      </a>
+    </li>
+  );
+}
+
+function NavbarCTA({ label, pagelink }: { label: string; pagelink: string }) {
+  return (
+    <li>
+      <a href={pagelink}>
+        <div className="flex flex-row justify-center items-center gap-2 m-2 px-4 py-1 border-primary-dark border-2 rounded-sm  text-primary-dark hover:text-black hover:bg-primary-dark">
+          <span>{label}</span>
+        </div>
+      </a>
+    </li>
+  );
+}
+
+function NavBarMenuIcon({ icon }: { icon: React.ReactNode }) {
+  return (
+    <button className="text-white float-right p-4 sm:hidden">{icon}</button>
   );
 }
 export default Navbar;
