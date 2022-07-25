@@ -9,9 +9,10 @@ function App() {
   return (
     <div className="App w-full">
       <Navbar />
-      {/* <Home />
-      <About /> */}
+      <Home />
       <Projects />
+      <About />
+
     </div>
   );
 }

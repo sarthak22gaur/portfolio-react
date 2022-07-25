@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;400;700;900&family=Kalam:wght@300;400;700&display=swap');
+
+
 /* Box sizing rules */
 *,
 *::before,
@@ -29,6 +32,7 @@ html:focus-within {
 html,
 body {
   height: 100%;
+  font-family: 'Inconsolata', monospace;
 }
 
 /* Set core body defaults */
@@ -67,7 +71,6 @@ picture {
   }
 }
 body {
-  font-family: var(--ff-primary);
   font-size: 16px;
   line-height: 1.5;
   color: var(--color-neutral-100);
