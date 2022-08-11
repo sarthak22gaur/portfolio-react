@@ -3,3 +3,20 @@
 @tailwind components;
 @tailwind utilities;
 /*# sourceMappingURL=App.css.map */
+
+@layer base {
+    html, body {
+        height: 100%;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        font-family: 'Poppins', sans-serif;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 1.5;
+        color: #333;
+        background-color: #0d1624;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+}
